@@ -26,14 +26,14 @@ class ApiController extends Controller {
                     'dutation' => 'required|numeric', 
                     'volume' => 'required|numeric', 
                     'temperature' => 'required|numeric',
-                    'hue' => 'required|numeric', 
-                    'saturation' => 'required|numeric',
-                    'loudness' => 'required|numeric',
-                    'brightness' => 'required|numeric',
-                    'acidity' => 'required|numeric',
-                    'salinity' => 'required|numeric', 
-                    'glucose' => 'required|numeric', 
-                    'pregnant' => 'required|boolean'
+                    'hue' => 'numeric', 
+                    'saturation' => 'numeric',
+                    'brightness' => 'numeric',
+                    'loudness' => 'numeric',
+                    'acidity' => 'numeric',
+                    'salinity' => 'numeric', 
+                    'glucose' => 'numeric', 
+                    'pregnant' => 'boolean'
                 ]);
                 if ($validator->fails()) {
                     return response()->json($validator->errors());
