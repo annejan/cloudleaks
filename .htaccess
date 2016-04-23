@@ -1,0 +1,9 @@
+RewriteEngine On
+Options +FollowSymlinks -MultiViews
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ portal.php?r=$1 [QSA,L]
