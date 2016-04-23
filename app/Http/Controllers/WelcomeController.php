@@ -1,6 +1,13 @@
 <?php namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Contracts\Auth\Registrar;
+use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+
 class WelcomeController extends Controller {
+
+	use AuthenticatesAndRegistersUsers;
 
 	/*
 	|--------------------------------------------------------------------------
@@ -38,6 +45,11 @@ class WelcomeController extends Controller {
 	 * @return Response
 	 */
 	public function portal()
+	{
+		return view('portal');
+	}
+	
+	public function login()
 	{
 		return view('portal');
 	}

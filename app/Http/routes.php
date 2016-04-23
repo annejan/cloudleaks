@@ -21,3 +21,4 @@ Route::controllers([
 ]);
 
 Route::get('portal', 'WelcomeController@portal');
+Route::post('portal', 'WelcomeController@login');
