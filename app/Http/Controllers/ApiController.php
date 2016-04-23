@@ -81,7 +81,7 @@ class ApiController extends Controller {
             
             foreach($samples as $sample) {
                 $item = new \stdClass();
-                $item->toilet = $sample->toilet->name;
+                $item->toilet = $sample->toilet->id;
                 $item->duration = $sample->duration;
                 $item->volume = $sample->volume;
                 $item->temperature = $sample->temperature;

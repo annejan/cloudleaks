@@ -12,18 +12,18 @@
 	<section class="rain"></section>
 	<section class="content">
 		<h1>Cloud Leaks Internet Toilets</h1>
-		<div id="stats"></div>
+		<div id="stats" style="height: 250px;"></div>
 	</section>
 	<script>
                 var stats = new Morris.Bar({
                     element: 'stats',
                     data: [
-                        {   toilet: "", duration: 0, volume: 0, temperature: 0, loudness: 0,
+                        {   toilet: 0, duration: 0, volume: 0, temperature: 0, loudness: 0,
                             hue: 0, saturation: 0, brightness: 0, 
                             acidity: 0, salinity: 0, glucose: 0, pregnant: 0
                         }
                     ],
-                    xkey: 'sample',
+                    xkey: 'toilet',
                     ykeys: ['toilet', 'duration', 'volume', 'temperature', 'loudness',
                                 'hue', 'saturation', 'brightness', 
                                 'acidity', 'salinity', 'glucose', 'pregnant'],
