@@ -1,0 +1,115 @@
+html{height:100%;}
+body {
+    background:#0D343A;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif';
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+
+.drop {
+    background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ),
+    to(rgba(255,255,255,0.6))  );
+    background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%,
+    rgba(255,255,255,.6) 100%);
+    width:1px;
+    height:89px;
+    position: absolute;
+    bottom:200px;
+    -webkit-animation: fall .63s linear infinite;
+    -moz-animation: fall .63s linear infinite;
+}
+.rain {
+    background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ),
+    to(#000000)  );
+    background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(0,0,0,1)
+    100%);
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* animate the drops*/
+@-webkit-keyframes fall {
+    to {margin-top:900px;}
+}
+@-moz-keyframes fall {
+    to {margin-top:900px;}
+}
+
+h1 {
+    font-size: 4em;
+    padding-top: 50px;
+}
+h2 {
+    font-size: 3em;
+}
+h3, label {
+    font-size: 2em;
+}
+h4 {
+    font-size: 1em;
+}
+h5 {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;   
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+label {
+    display: block;	
+    float: left;
+    clear: left;
+    margin-top: 30px;
+}
+input {
+    display: block;
+    float: right;
+    clear: right;
+    height: 2em;
+    margin-top: 30px;
+    outline: none;
+    border-color: #ff00de;
+    box-shadow: 0 0 70px #ff00de;
+    font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif';
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+form {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.blocks div {
+    text-shadow: none;
+    width: 30%;
+    float: left;
+    background-color: #fff;
+    margin-right: 5%;
+    padding-bottom: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 70px #ff00de;
+}
+.blocks div:nth-of-type(3) {
+    margin-right: 0;
+}
+
+.blocks div img {
+    margin-top: 10px;
+    width: 90%;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 0 35px #ff00de;
+}
+
+.blocks div ul {
+    list-style: none; 
+    padding: 0;
+}
+.blocks div li {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+        
+}
