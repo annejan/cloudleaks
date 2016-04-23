@@ -19,7 +19,7 @@ class ToiletTableSeeder extends Seeder
         }
         DB::table('toilets')->truncate();
         Toilet::create([
-            'name' => 'Ons eerste toilet',
+            'name' => 'Ons eerste Toilet',
             'apikey' => 'jaeceifaexoonahsohgheCheiludaSeebaey2IiZaeCh1Zaph0aiveec4hohph3j'
         ]);
         if (env('DB_CONNECTION') != 'sqlite') {
