@@ -22,16 +22,16 @@ class CreateSamplesTable extends Migration {
 	                $table->foreign('toilet_id')->references('id')->on('toilets');		
 
                         $table->integer('duration')->unsigned();
-                        $table->integer('loudness')->unsigned();
-                        $table->integer('volume')->unsigned();
-                        $table->integer('hue')->unsigned();
-                        $table->integer('saturation')->unsigned();
-                        $table->integer('brightness')->unsigned();
+                        $table->integer('loudness')->unsigned()->nullable();
+                        $table->integer('volume')->unsigned()->nullable();
+                        $table->integer('hue')->unsigned()->nullable();
+                        $table->integer('saturation')->unsigned()->nullable();
+                        $table->integer('brightness')->unsigned()->nullable();
                         $table->integer('temperature')->unsigned();
-                        $table->integer('acidity')->unsigned();
-                        $table->integer('salinity')->unsigned();
-                        $table->integer('glucose')->unsigned();
-                        $table->boolean('pregnant');
+                        $table->integer('acidity')->unsigned()->nullable();
+                        $table->integer('salinity')->unsigned()->nullable();
+                        $table->integer('glucose')->unsigned()->nullable();
+                        $table->boolean('pregnant')->default(false);
 
 			$table->timestamps();
 		});
