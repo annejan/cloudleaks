@@ -22,6 +22,7 @@ class CreateSamplesTable extends Migration {
 	                $table->foreign('toilet_id')->references('id')->on('toilets');		
 
                         $table->integer('dutation')->unsigned();
+                        $table->integer('loudness')->unsigned();
                         $table->integer('volume')->unsigned();
                         $table->integer('hue')->unsigned();
                         $table->integer('saturation')->unsigned();

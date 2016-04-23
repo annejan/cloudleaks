@@ -28,6 +28,7 @@ class ApiController extends Controller {
                     'temperature' => 'required|numeric',
                     'hue' => 'required|numeric', 
                     'saturation' => 'required|numeric',
+                    'loudness' => 'required|numeric',
                     'brightness' => 'required|numeric',
                     'acidity' => 'required|numeric',
                     'salinity' => 'required|numeric', 
