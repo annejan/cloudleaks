@@ -4,12 +4,14 @@ use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Http\Request;
 
 class WelcomeController extends Controller {
 
 	use AuthenticatesAndRegistersUsers;
 
 	public $loginPath = 'portal';
+	public $redirectTo = 'stats';
 	
 	/*
 	|--------------------------------------------------------------------------
@@ -52,7 +54,13 @@ class WelcomeController extends Controller {
 		return view('portal');
 	}
 	
-	public function postLogin()
+	/**
+	 * Handle a login request to the application.
+	 *
+	 * @param  \Illuminate\Http\Request  $request
+	 * @return \Illuminate\Http\Response
+	 */
+	public function postLogin(Request $request)
 	{
 		$this->validate($request, [
 			'email' => 'required|email', 'password' => 'required',
