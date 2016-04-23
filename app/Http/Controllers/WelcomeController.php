@@ -7,10 +7,6 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller {
-
-	use AuthenticatesAndRegistersUsers;
-
-	
 	/**
 	 * The Guard implementation.
 	 *
@@ -86,6 +82,41 @@ class WelcomeController extends Controller {
 					->withErrors([
 						'email' => $this->getFailedLoginMessage(),
 					]);
+	}
+
+	/**
+	 * Get the post register / login redirect path.
+	 *
+	 * @return string
+	 */
+	public function redirectPath()
+	{
+		if (property_exists($this, 'redirectPath'))
+		{
+			return $this->redirectPath;
+		}
+
+		return property_exists($this, 'redirectTo') ? $this->redirectTo : '/home';
+	}
+
+	/**
+	 * Get the path to the login route.
+	 *
+	 * @return string
+	 */
+	public function loginPath()
+	{
+		return property_exists($this, 'loginPath') ? $this->loginPath : '/auth/login';
+	}
+	
+	/**
+	 * Get the failed login message.
+	 *return view('portal');
+	 * @return string
+	 */
+	protected function getFailedLoginMessage()
+	{
+		return 'These credentials do not match our records.';
 	}
 
 }
