@@ -16,14 +16,7 @@ class Profile extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name'];
-	
-	/**
-         * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-         */
-        function experience() {
-            return $this->belongsTo('App\User');
-        }
+	protected $fillable = ['name', 'apikey'];
         
         /**
          * @return \Illuminate\Database\Eloquent\Relations\HasMany
