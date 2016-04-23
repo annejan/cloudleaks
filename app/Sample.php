@@ -18,7 +18,7 @@ class Sample extends Model {
 	 */
 	protected $fillable = [ 
                                 'toilet_id', 'profile_id', 
-                                'dutation', 'volume', 'temperature', 'loudness',
+                                'duration', 'volume', 'temperature', 'loudness',
                                 'hue', 'saturation', 'brightness', 
                                 'acidity', 'salinity', 'glucose', 'pregnant'
                               ];
