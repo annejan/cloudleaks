@@ -28,6 +28,7 @@ class CreateSamplesTable extends Migration {
                         $table->integer('brightness')->unsigned();
                         $table->integer('temperature')->unsigned();
                         $table->integer('acidity')->unsigned();
+                        $table->integer('salinity')->unsigned();
                         $table->integer('glucose')->unsigned();
                         $table->boolean('pregnant');
 
