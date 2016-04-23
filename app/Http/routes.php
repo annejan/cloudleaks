@@ -20,5 +20,5 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('portal', 'WelcomeController@portal');
-Route::post('portal', 'WelcomeController@login');
+Route::get('portal', 'WelcomeController@getLogin');
+Route::post('portal', 'WelcomeController@postLogin');

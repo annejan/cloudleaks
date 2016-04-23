@@ -1,51 +1,35 @@
 <!DOCTYPE html>
 <head>
 <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAk5OTAPv7+wACAgIA/f39AI6OjgDCwsIAY2NjAAQEBADLy8sA////AEFBQQAGBgYA+Pj4ANbW1gB5eXkAra2tAGBgYAABAQEA8/PzAMjIyAD8/PwA0dHRAKampgDj4+MAWVlZAAMDAwD19fUA/v7+ANPT0wAVFRUAqKioANzc3ADDw8MABQUFAPf39wDV1dUAS0tLACAgIABdXV0A+fn5AM7OzgB4eHgA19fXAOnp6QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABISEhISEhISEhISEhISEgAAAAAAAAAAAAAFCgocIQAAAAASEQAAAAAAAAQKHBIAAAAAAAEcIgMlLAYCChwAAAAAAAAAHAAKCgoKCgoWAAAAAAAAABwbHBwcCgocDQ8AAAAAAAAEKQkJFAgcCgoTAAAeHSoLEB8XCgoDHAoKEwAAEgAAJwAABwocEhwKChMAAAASGiYVHAIEDhIkICsZAAASAAAAAAAYHAAAAAASAAAAAAAAAAgEIwwAAAAAAAAAAAAAAAAcCgooAAAAAAAAAAAAAAAABAoKHAAAAAAAAAAAAAAAAAMKGxIAAAAAAAAAABISEhISEhISEhISEhISEoAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAAA=" rel="icon" type="image/x-icon" />
-	<title>Cloud Leaks Internet Toilets</title>
-        <link rel="stylesheet" href="style.css" />
-	<script	src="jquery.min.js"></script>
+	<title>Cloud Leaks Internet Toilet</title>
+	<link rel="stylesheet" href="/css/style.css" />
+	<script	src="/js/jquery.min.js"></script>
 </head>
 <body>
 	<section class="rain"></section>
-	<section class="content">
-		<h1>Cloud Leaks Internet Toilets</h1>
-		<h2>intel IoT roadshow</h2>
-		<h3>team: Intranet of Things</h3>
-		<h4><a href="/portal">Cloud Portal</a></h4>
-	</section>
-	<section class="blocks">
-	<div>
-	<h5>Prevent disease</h5>
-	Keep your family and loved ones safe.
-	<img src="prevention.jpg" alt="Prevent disease" />
-	<ul>
-            <li>Early detection</li>
-            <li>Instant feedback</li>
-            <li>Epidemic detection</li>
-            <li>Pandemic prevention</li>
-	</ul>
-	</div>
-	<div>
-	<h5>Sustainable</h5>
-	Powered by the energy of flushing water
-        <img src="green.jpg" alt="Sustainable power" />
-	<ul>
-            <li>No batteries</li>
-            <li>No waste</li>
-            <li>No maintenance</li>
-	</ul>
-	</div>
-	<div>
-	<h5>Zero Effort</h5>
-	You don't have to do anything extra
-        <img src="zero_effort.jpg" alt="Zero effort" />
-	<ul>
-            <li>Nothing to think about</li>
-            <li>Nothing to remember</li>
-            <li>No training required</li>
-	</ul>
-	</div>
-	</section>
+        <section class="content">
+
+            <h1>Cloud Leaks Internet of Toilets</h1>
+            <h2>Login Portal</h2>
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                        <ul>
+                                @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                @endforeach
+                        </ul>
+                </div>
+            @endif
+            <form role="form" method="POST" action="{{ url('/portal') }}">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <label for="email">Login:</label>
+                    <input type="email" id="email" name="email" value="{{ old('email') }}">
+                    <label for="passowrd">Password:</label>
+                    <input name="password" id="password" type="password">
+                    <input type="submit" value="Submit">
+            </form>
+        </section>
 	<script>
 		// number of drops created.
 		var nbDrop = randRange(512, 1337); 

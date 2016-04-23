@@ -9,6 +9,8 @@ class WelcomeController extends Controller {
 
 	use AuthenticatesAndRegistersUsers;
 
+	public $loginPath = 'portal';
+	
 	/*
 	|--------------------------------------------------------------------------
 	| Welcome Controller
@@ -44,14 +46,30 @@ class WelcomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function portal()
+        public function getLogin()
+
 	{
 		return view('portal');
 	}
 	
-	public function login()
+	public function postLogin()
 	{
-		return view('portal');
+		$this->validate($request, [
+			'email' => 'required|email', 'password' => 'required',
+		]);
+
+		$credentials = $request->only('email', 'password');
+
+		if ($this->auth->attempt($credentials, $request->has('remember')))
+		{
+			return redirect()->intended($this->redirectPath());
+		}
+
+		return redirect($this->loginPath())
+					->withInput($request->only('email', 'remember'))
+					->withErrors([
+						'email' => $this->getFailedLoginMessage(),
+					]);
 	}
 
 }
