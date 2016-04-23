@@ -23,7 +23,7 @@ class ApiController extends Controller {
                 $validator = Validator::make($request->all(), [
                     'toiletkey' => 'required',
                     'profilekey' => 'required',
-                    'dutation' => 'required|numeric', 
+                    'duration' => 'required|numeric', 
                     'volume' => 'required|numeric', 
                     'temperature' => 'required|numeric',
                     'hue' => 'numeric', 
@@ -53,7 +53,7 @@ class ApiController extends Controller {
 		$sample = Sample::create([
                     'toilet_id' => $toilet->id,
                     'profile_id' => $profile->id,
-                    'dutation' => $request->get('dutation'), 
+                    'duration' => $request->get('duration'), 
                     'volume' => $request->get('volume'), 
                     'temperature' => $request->get('temperature'),
                     'hue' => $request->get('hue'), 
