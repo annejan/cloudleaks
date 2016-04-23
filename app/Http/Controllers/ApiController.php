@@ -13,7 +13,7 @@ use App\Sample;
 class ApiController extends Controller {
 
 	/**
-	 * Show the form for creating a new resource.
+	 * Save my sample.
 	 *
          * @param  \Illuminate\Http\Request  $request
 	 * @return Response
@@ -66,6 +66,37 @@ class ApiController extends Controller {
                     
 		]);
 		return response()->json($sample);
+	}
+	
+	/**
+	 * Show the public stats.
+	 *
+	 * @return Response
+	 */
+	public function stats()
+	{
+            $samples = Sample::all();
+            
+            $response = [];
+            
+            foreach($samples as $sample) {
+                $item = new \stdClass();
+                $item->toilet = $sample->toilet->name;
+                $item->dutation = $sample->duration;
+                $item->volume = $sample->volume;
+                $item->temperature = $sample->temperature;
+                $item->loudness = $sample->loudness;
+                $item->hue = $sample->hue;
+                $item->saturation = $sample->saturation;
+                $item->brightness = $sample->brightness; 
+                $item->acidity = $sample->acidity;
+                $item->salinity = $sample->salinity; 
+                $item->glucose = $sample->glucose;
+                $item->pregnant = $sample->pregnant;
+                $response[] = $item;
+            }
+            
+            return response()->json($response);
 	}
 
 }

@@ -15,8 +15,24 @@
 		<div id="stats"></div>
 	</section>
 	<script>
-                
-	
+                var stats = new Morris.Bar({
+                    element: 'stats',
+                    data: [
+                        {   toilet: "", dutation: 0, volume: 0, temperature: 0, loudness: 0,
+                            hue: 0, saturation: 0, brightness: 0, 
+                            acidity: 0, salinity: 0, glucose: 0, pregnant: 0
+                        }
+                    ],
+                    xkey: 'sample',
+                    ykeys: ['toilet', 'dutation', 'volume', 'temperature', 'loudness',
+                                'hue', 'saturation', 'brightness', 
+                                'acidity', 'salinity', 'glucose', 'pregnant'],
+                    labels: ['Toilet', 'Duration', 'Volume', 'Tmperature', 'Loudness',
+                                'Hue', 'Saturation', 'Brightness', 
+                                'Acidity', 'Salinity', 'Glucose', 'Pregnant'],
+                });
+
+            
 	
 		// number of drops created.
 		var nbDrop = randRange(512, 1337); 

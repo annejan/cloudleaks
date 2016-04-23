@@ -22,6 +22,9 @@ Route::controllers([
 
 Route::get('statistics', 'WelcomeController@stats');
 
+Route::get('graph/stats', 'ApiController@stats');
+
+
 Route::get('portal', 'WelcomeController@getLogin');
 Route::post('portal', 'WelcomeController@postLogin');
 
