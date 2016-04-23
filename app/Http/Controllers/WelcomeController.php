@@ -10,6 +10,14 @@ class WelcomeController extends Controller {
 
 	use AuthenticatesAndRegistersUsers;
 
+	
+	/**
+	 * The Guard implementation.
+	 *
+	 * @var Guard
+	 */
+	protected $auth;
+	
 	public $loginPath = 'portal';
 	public $redirectTo = 'stats';
 	

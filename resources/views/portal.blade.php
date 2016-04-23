@@ -23,7 +23,7 @@
             @endif
             <form role="form" method="POST" action="{{ url('/portal') }}">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <label for="email">Login:</label>
+                    <label for="email">Email:</label>
                     <input type="email" id="email" name="email" value="{{ old('email') }}">
                     <label for="passowrd">Password:</label>
                     <input name="password" id="password" type="password">
