@@ -62,7 +62,7 @@ class ApiController extends Controller {
                     'glucose' => 'required', 
                     'pregnant' => 'required'
                     
-		])
+		]);
 		return response()->json($sample);
 	}
 
