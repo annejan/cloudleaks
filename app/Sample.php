@@ -9,7 +9,7 @@ class Sample extends Model {
 	 *
 	 * @var string
 	 */
-	protected $table = 'profiles';
+	protected $table = 'samples';
 
 	/**
 	 * The attributes that are mass assignable.

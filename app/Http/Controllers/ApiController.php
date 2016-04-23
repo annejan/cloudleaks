@@ -37,13 +37,13 @@ class ApiController extends Controller {
                 if ($validator->fails()) {
                     return response()->json($validator->errors());
                 }
-                $toilet = Toilet::where(['apikey' => $request->get('toiletkey')]);
+                $toilet = Toilet::where(['apikey' => $request->get('toiletkey')])->first();
                 if (is_null($toilet)) {
                     $error = new \stdClass();
                     $error->toilets = ["Toilet not found"];
                     return response()->json($error);
                 }
-		$profile = Profile::where(['apikey' => $request->get('profilekey')]);
+		$profile = Profile::where(['apikey' => $request->get('profilekey')])->first();
 		if (is_null($profile)) {
                     $profile = Profile::create([
                         'apikey' => $request->get('profilekey')
@@ -52,16 +52,16 @@ class ApiController extends Controller {
 		$sample = Sample::create([
                     'toilet_id' => $toilet->id,
                     'profile_id' => $profile->id,
-                    'dutation' => 'required', 
-                    'volume' => 'required', 
-                    'temperature' => 'required',
-                    'hue' => 'required', 
-                    'saturation' => 'required',
-                    'brightness' => 'required',
-                    'acidity' => 'required',
-                    'salinity' => 'required', 
-                    'glucose' => 'required', 
-                    'pregnant' => 'required'
+                    'dutation' => $request->get('dutation'), 
+                    'volume' => $request->get('volume'), 
+                    'temperature' => $request->get('temperature'),
+                    'hue' => $request->get('hue'), 
+                    'saturation' => $request->get('saturation'),
+                    'brightness' => $request->get('brightness'),
+                    'acidity' => $request->get('acidity'),
+                    'salinity' => $request->get('salinity'), 
+                    'glucose' => $request->get('glucose'), 
+                    'pregnant' => $request->get('pregnant')
                     
 		]);
 		return response()->json($sample);

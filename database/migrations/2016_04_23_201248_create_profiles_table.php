@@ -16,7 +16,7 @@ class CreateProfilesTable extends Migration {
 		{
 			$table->increments('id');
 			
-			$table->string('name');
+			$table->string('name')->nullable();
 			$table->string('apikey');
                         
 			$table->timestamps();
