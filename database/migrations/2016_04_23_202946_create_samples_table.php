@@ -17,9 +17,9 @@ class CreateSamplesTable extends Migration {
 			$table->increments('id');
 			
                         $table->integer('profile_id')->unsigned();
-19	                $table->foreign('profile_id')->references('id')->on('profiles');
+	                $table->foreign('profile_id')->references('id')->on('profiles');
                         $table->integer('toilet_id')->unsigned();
-19	                $table->foreign('toilet_id')->references('id')->on('toilets');		
+	                $table->foreign('toilet_id')->references('id')->on('toilets');		
 
                         $table->integer('dutation')->unsigned();
                         $table->integer('volume')->unsigned();
