@@ -25,18 +25,10 @@ class WelcomeController extends Controller {
 	 */
 	public function __construct(Guard $auth, Registrar $registrar)
 	{
-		$this->auth = $auth;
-        }
+                $this->auth = $auth;
+                $this->middleware('guest');
 
-	/**
-	 * Create a new controller instance.
-	 *
-	 * @return void
-	 */
-	public function __construct()
-	{
-		$this->middleware('guest');
-	}
+        }
 
 	/**
 	 * Show the application welcome screen to the user.
