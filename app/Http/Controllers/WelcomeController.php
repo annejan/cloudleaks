@@ -31,7 +31,7 @@ class WelcomeController extends Controller {
         }
 
 	/**
-	 * Show the application welcome screen to the user.
+	 * Show the application  welcome screen to the user.
 	 *
 	 * @return Response
 	 */
@@ -39,13 +39,23 @@ class WelcomeController extends Controller {
 	{
 		return view('welcome');
 	}
-/**
-	 * Show the application welcome screen to the user.
+	
+        /**
+	 * Show the application stats screen to the user.
+	 *
+	 * @return Response
+	 */
+        public function stats()
+	{
+		return view('stats');
+	}
+
+        /**
+	 * Show the perspnal login screen to the user.
 	 *
 	 * @return Response
 	 */
         public function getLogin()
-
 	{
 		return view('portal');
 	}

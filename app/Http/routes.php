@@ -20,6 +20,8 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+Route::get('statistics', 'WelcomeController@stats');
+
 Route::get('portal', 'WelcomeController@getLogin');
 Route::post('portal', 'WelcomeController@postLogin');
 
