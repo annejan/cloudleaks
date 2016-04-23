@@ -32,8 +32,10 @@
                                 'Acidity', 'Salinity', 'Glucose', 'Pregnant'],
                 });
 
-            
-	
+                $.getJSON( "graph/stats", function( data ) {
+                    stats.setData(data);
+                });
+                
 		// number of drops created.
 		var nbDrop = randRange(512, 1337); 
 
