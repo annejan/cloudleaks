@@ -3,7 +3,6 @@
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
-use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller {
@@ -17,16 +16,17 @@ class WelcomeController extends Controller {
 	public $loginPath = 'portal';
 	public $redirectTo = 'stats';
 	
-	/*
-	|--------------------------------------------------------------------------
-	| Welcome Controller
-	|--------------------------------------------------------------------------
-	|
-	| This controller renders the "marketing page" for the application and
-	| is configured to only allow guests. Like most of the other sample
-	| controllers, you are free to modify or remove it as you desire.
-	|
-	*/
+	/**
+	 * Create a new authentication controller instance.
+	 *
+	 * @param  \Illuminate\Contracts\Auth\Guard  $auth
+	 * @param  \Illuminate\Contracts\Auth\Registrar  $registrar
+	 * @return void
+	 */
+	public function __construct(Guard $auth, Registrar $registrar)
+	{
+		$this->auth = $auth;
+        }
 
 	/**
 	 * Create a new controller instance.
