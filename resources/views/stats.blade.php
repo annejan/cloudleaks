@@ -15,10 +15,10 @@
 		<div id="stats" style="height: 250px;"></div>
 	</section>
 	<script>
-                var stats = new Morris.Bar({
+                var stats = new Morris.Line({
                     element: 'stats',
                     data: [
-                        {   toilet: 0, duration: 0, volume: 0, temperature: 0, loudness: 0,
+                        {  sample: 0, toilet: 0, duration: 0, volume: 0, temperature: 0, loudness: 0,
                             hue: 0, saturation: 0, brightness: 0, 
                             acidity: 0, salinity: 0, glucose: 0, pregnant: 0
                         }
