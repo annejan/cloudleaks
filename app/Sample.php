@@ -17,7 +17,7 @@ class Sample extends Model {
 	 * @var array
 	 */
 	protected $fillable = [ 
-                                'name', 'toilet_id', 'profile_id', 
+                                'toilet_id', 'profile_id', 
                                 'dutation', 'volume', 'temperature',
                                 'hue', 'saturation', 'brightness', 
                                 'acidity', 'salinity', 'glucose', 'pregnant'

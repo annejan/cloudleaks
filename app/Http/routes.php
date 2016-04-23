@@ -22,3 +22,5 @@ Route::controllers([
 
 Route::get('portal', 'WelcomeController@getLogin');
 Route::post('portal', 'WelcomeController@postLogin');
+
+Route::post('sample/create', 'ApiController@create');
