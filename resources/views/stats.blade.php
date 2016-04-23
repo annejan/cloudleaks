@@ -23,7 +23,7 @@
                             acidity: 0, salinity: 0, glucose: 0, pregnant: 0
                         }
                     ],
-                    xkey: 'toilet',
+                    xkey: 'sample',
                     ykeys: ['toilet', 'duration', 'volume', 'temperature', 'loudness',
                                 'hue', 'saturation', 'brightness', 
                                 'acidity', 'salinity', 'glucose', 'pregnant'],
