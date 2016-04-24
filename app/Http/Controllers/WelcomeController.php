@@ -14,7 +14,7 @@ class WelcomeController extends Controller {
 	protected $auth;
 	
 	public $loginPath = 'portal';
-	public $redirectTo = 'stats';
+	public $redirectTo = 'statistics';
 	
 	/**
 	 * Create a new authentication controller instance.
