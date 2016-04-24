@@ -11,7 +11,7 @@
 		<h1>Cloud Leaks Internet Toilets</h1>
 		<h2>intel IoT roadshow</h2>
 		<h3><a href="https://www.powtoon.com/online-presentation/fwYcsHOK4Py/?mode=movie#/" target="_blank">Video</a></h3>
-	<	h3><a href="/statistics">Statistics</a> &nbsp; <a href="/portal">Cloud Portal</a></h3>
+                <h3><a href="/statistics">Statistics</a> &nbsp; <a href="/portal">Cloud Portal</a></h3>
                 <h4>team: Intranet of Things</h4>
 	</section>
 	<section class="blocks">
