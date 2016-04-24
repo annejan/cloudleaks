@@ -84,7 +84,7 @@ class ApiController extends Controller {
                 $item = new \stdClass();
                 $item->sample = $sample->id;
                 $item->toilet = $sample->toilet->id;
-                $item->duration = $sample->duration / 100000;
+                $item->duration = $sample->duration / 10000;
                 $item->volume = $sample->volume;
                 $item->temperature = $sample->temperature;
                 $item->loudness = $sample->loudness;
