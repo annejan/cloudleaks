@@ -92,7 +92,7 @@ class ApiController extends Controller {
                 $item->saturation = $sample->saturation;
                 $item->brightness = $sample->brightness; 
                 $item->acidity = $sample->acidity;
-                $item->salinity = $sample->salinity; 
+                $item->salinity = $sample->salinity / 10; 
                 $item->glucose = $sample->glucose;
                 $item->pregnant = $sample->pregnant;
                 $response[] = $item;
