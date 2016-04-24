@@ -59,6 +59,7 @@ class ApiController extends Controller {
                     'hue' => $request->get('hue'), 
                     'saturation' => $request->get('saturation'),
                     'brightness' => $request->get('brightness'),
+                    'loudness' => $request->get('loudness'),
                     'acidity' => $request->get('acidity'),
                     'salinity' => $request->get('salinity'), 
                     'glucose' => $request->get('glucose'), 
