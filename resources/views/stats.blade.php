@@ -36,6 +36,12 @@
                     stats.setData(data);
                 });
                 
+                setInterval(function() {
+                    $.getJSON( "graph/stats", function( data ) {
+                        stats.setData(data);
+                    });
+                }, 2500);
+                
 		// number of drops created.
 		var nbDrop = randRange(512, 1337); 
 
