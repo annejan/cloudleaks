@@ -87,7 +87,7 @@ class ApiController extends Controller {
                 $item->duration = $sample->duration / 10000;
                 $item->volume = $sample->volume;
                 $item->temperature = $sample->temperature;
-                $item->loudness = $sample->loudness;
+                $item->loudness = $sample->loudness / 10;
                 $item->hue = $sample->hue;
                 $item->saturation = $sample->saturation;
                 $item->brightness = $sample->brightness; 
