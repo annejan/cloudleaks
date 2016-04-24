@@ -30,6 +30,8 @@
                     labels: ['Toilet', 'Duration', 'Volume', 'Tmperature', 'Loudness',
                                 'Hue', 'Saturation', 'Brightness', 
                                 'Acidity', 'Salinity', 'Glucose', 'Pregnant'],
+                    hideHover: true,
+                    resize: true
                 });
 
                 $.getJSON( "graph/stats", function( data ) {
